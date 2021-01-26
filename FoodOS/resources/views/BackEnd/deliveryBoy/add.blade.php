@@ -25,29 +25,29 @@
                             @csrf
                             <div class="form-group">
                                 <label>Delivery Boy Name</label>
-                                <input type="text" class="form-control" name="delivery_boy_name">
+                                <input type="text" class="form-control" name="delivery_boy_name" required>
                             </div>
 
                             <div class="form-group">
                                 <label>Phone Number</label>
-                                <input type="number" class="form-control" name="delivery_boy_phone_number">
+                                <input type="number" class="form-control" name="delivery_boy_phone_number" required>
                             </div>
 
                             <div class="form-group">
                                 <label>Password</label>
-                                <input type="password" class="form-control" name="delivery_boy_password">
+                                <input type="password" class="form-control" name="delivery_boy_password" required>
                             </div>
 
                             <div class="form-group">
                                 <label>Added On</label>
-                                <input type="date" class="form-control" name="added_on">
+                                <input type="date" class="form-control" name="added_on" required>
                             </div>
 
                             <div class="form-group">
                                 <label>Delivery Boy Status</label>
                                 <div class="radio">
-                                    <input type="radio" name="delivery_boy_status" value="1">Active
-                                    <input type="radio" name="delivery_boy_status" value="0">Inactive
+                                    <input type="radio" name="delivery_boy_status" value="1" required>Active
+                                    <input type="radio" name="delivery_boy_status" value="0" required>Inactive
                                 </div>
                             </div>
                             <button type="submit" name="btn" class="btn btn-outline-primary btn-block"> Add Delivery Boy</button>

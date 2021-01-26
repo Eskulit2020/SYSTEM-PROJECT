@@ -36,7 +36,7 @@
 header-img start
 ============================== -->
 <section id="hero-area">
-    <img class="img-responsive" src="{{asset('/FrontEnd Resource File')}}/images/header.png" width="100%" height="900px" alt="" style="background-position: f">
+    <img class="img-responsive" src="{{asset('/FrontEnd Resource File')}}/images/header.png" width="100%" height="900px" alt="">
 </section>
 <!--
 Header start
@@ -70,9 +70,24 @@ Header start
                                     <li><a href="#about-us">About us</a></li>
                                     <li><a href="#blog">Blog</a></li>
                                     <li><a href="#price">Menu</a></li>
-                                    <li><a href="#subscribe">News</a></li>
                                     <li><a href="#contact-us">Contacts</a></li>
-                                    <li><a href="#contact-us">Order Now</a></li>
+                                    <li class="nav-item dropdown">
+                                        <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                            {{ Auth::user()->name }}
+                                        </a>
+
+                                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                            <a class="dropdown-item" href="{{ route('logout') }}"
+                                               onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                                {{ __('Logout') }}
+                                            </a>
+
+                                            <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                                @csrf
+                                            </form>
+                                        </div>
+                                    </li>
                                 </ul>
                             </div><!-- /.navbar-collapse -->
                         </div><!-- /.container-fluid -->
@@ -146,9 +161,9 @@ about-us start
             <div class="col-md-12">
                 <div class="block">
                     <img class="wow fadeInUp" data-wow-duration="300ms" data-wow-delay="400ms" src="{{asset('/FrontEnd Resource File')}}/images/logo.png" alt="cooker-img">
-                    <h1 class="heading wow fadeInUp" data-wow-duration="400ms" data-wow-delay="500ms" >Your <span>Restaurant’s</span> <br> Website Has To Look <span>Good</span>
+                    <h1 class="heading wow fadeInUp" data-wow-duration="400ms" data-wow-delay="500ms" ><span>Happy-nest</span>
                     </h1>
-                    <p class="wow fadeInUp" data-wow-duration="300ms" data-wow-delay="600ms">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim </br> ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in </br>voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat</p>
+                    <p class="wow fadeInUp" data-wow-duration="300ms" data-wow-delay="600ms"></p>
                 </div>
             </div><!-- .col-md-12 close -->
         </div><!-- .row close -->
@@ -169,8 +184,8 @@ blog start
                                 <img src="{{asset('/FrontEnd Resource File')}}/images/blog/blog-img-1.jpg" alt="blog-img">
                             </div>
                             <div class="content-right">
-                                <h3>Homestyle Chicken Pot Pie</h3>
-                                <p>Prepared in true New England fash-ion. Tender all-white meat chicken simmered...</p>
+                                <h3>CHICKEN BARBEQUE PIZZA</h3>
+                                <p></p>
                             </div>
                         </li>
                         <li class="wow fadeInLeft" data-wow-duration="300ms" data-wow-delay="400ms">
@@ -178,14 +193,14 @@ blog start
                                 <img src="{{asset('/FrontEnd Resource File')}}/images/blog/blog-img-2.jpg" alt="blog-img">
                             </div>
                             <div class="content-right">
-                                <h3>Homestyle Chicken Pot Pie</h3>
-                                <p>Prepared in true New England fash-ion. Tender all-white meat chicken simmered...</p>
+                                <h3>SHAWARMA PIZZA</h3>
+                                <p></p>
                             </div>
                         </li>
                         <li class="wow fadeInLeft" data-wow-duration="300ms" data-wow-delay="500ms">
                             <div class="content-left">
-                                <h3>Homestyle Chicken Pot Pie</h3>
-                                <p>Prepared in true New England fash-ion. Tender all-white meat chicken simmered...</p>
+                                <h3>CHEESE BURGER PIZZA</h3>
+                                <p></p>
                             </div>
                             <div class="blog-img-2">
                                 <img src="{{asset('/FrontEnd Resource File')}}/images/blog/blog-img-3.jpg" alt="blog-img">
@@ -193,8 +208,8 @@ blog start
                         </li>
                         <li class="wow fadeInLeft" data-wow-duration="300ms" data-wow-delay="600ms">
                             <div class="content-left">
-                                <h3>Homestyle Chicken Pot Pie</h3>
-                                <p>Prepared in true New England fash-ion. Tender all-white meat chicken simmered...</p>
+                                <h3>BACON PIZZA</h3>
+                                <p></p>
                             </div>
                             <div class="blog-img-2">
                                 <img src="{{asset('/FrontEnd Resource File')}}/images/blog/blog-img-4.jpg" alt="blog-img">
@@ -205,8 +220,8 @@ blog start
                                 <img src="{{asset('/FrontEnd Resource File')}}/images/blog/blog-img-5.jpg" alt="blog-img">
                             </div>
                             <div class="content-right">
-                                <h3>Homestyle Chicken Pot Pie</h3>
-                                <p>Prepared in true New England fash-ion. Tender all-white meat chicken simmered...</p>
+                                <h3>BEEF AND MUSHROOM PIZZA</h3>
+                                <p></p>
                             </div>
                         </li>
                         <li class="wow fadeInUp" data-wow-duration="300ms" data-wow-delay="800ms">
@@ -214,8 +229,8 @@ blog start
                                 <img src="{{asset('/FrontEnd Resource File')}}/images/blog/blog-img-6.jpg" alt="blog-img">
                             </div>
                             <div class="content-right">
-                                <h3>Homestyle Chicken Pot Pie</h3>
-                                <p>Prepared in true New England fash-ion. Tender all-white meat chicken simmered...</p>
+                                <h3>VEGETARIAN PIZZA</h3>
+                                <p></p>
                             </div>
                         </li>
                     </ul>
@@ -233,7 +248,6 @@ price start
             <div class="col-md-12">
                 <div class="block">
                     <h1 class="heading wow fadeInUp" data-wow-duration="300ms" data-wow-delay="300ms">our <span>MENU</span> the <span>PRICE</span></h1>
-                    <p class="wow fadeInUp" data-wow-duration="300ms" data-wow-delay="400ms">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco </p>
                     <div class="pricing-list">
                         <div class="title">
                             <h3>Featured <span>on the week</span></h3>
@@ -300,7 +314,7 @@ price start
                                 </div>
                             </li>
                         </ul>
-                        <a class="btn btn-default pull-right wow bounceIn" data-wow-duration="500ms" data-wow-delay="1200ms" href="#" role="button">More Info</a>
+                        <a class="btn btn-default pull-right wow bounceIn" data-wow-duration="500ms" data-wow-delay="1200ms" href="{{route('order')}}" role="button">Order Now</a>
                     </div>
                 </div>
             </div><!-- .col-md-12 close -->
@@ -316,7 +330,7 @@ subscribe start
             <div class="col-md-12">
                 <div class="block">
                     <h1 class=" heading wow fadeInUp" data-wow-duration="300ms" data-wow-delay="300ms"> SUBSCRIBE <span>to our</span> NEWSLETTER</h1>
-                    <p class="wow fadeInUp" data-wow-duration="300ms" data-wow-delay="400ms">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod </p>
+                    <p class="wow fadeInUp" data-wow-duration="300ms" data-wow-delay="400ms"></p>
                     <form class="form-inline">
                         <div class="form-group">
                             <div class="input-group">
@@ -412,7 +426,7 @@ footer  start
                         <h3>Follow <span>US</span></h3>
                         <ul>
                             <li>
-                                <a href="#">
+                                <a href="https://web.facebook.com/MiekoysStaBarbaraPangasinan">
                                     <i class="fa fa-facebook"></i>
                                 </a>
                             </li>

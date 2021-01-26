@@ -25,25 +25,25 @@
                             @csrf
                             <div class="form-group">
                                 <label>Dish Name</label>
-                                <input type="text" class="form-control" name="dish_name">
+                                <input type="text" class="form-control" name="dish_name" required>
                             </div>
 
 
                             <div class="form-group">
                                 <label>Detail</label>
-                                <textarea type="text" class="form-control" name="dish_detail" rows="5"></textarea>
+                                <textarea type="text" class="form-control" name="dish_detail" rows="5" required></textarea>
                             </div>
 
                             <div class="form-group">
                                 <label>Dish Image</label>
-                                <input type="file" class="form-control" name="dish_image" accept="image/*">
+                                <input type="file" class="form-control" name="dish_image" accept="image/*" required>
                             </div>
 
                             <div class="form-group">
                                 <label>Status</label>
                                 <div class="radio">
-                                    <input type="radio" name="dish_status" value="1">Active
-                                    <input type="radio" name="dish_status" value="0">Inactive
+                                    <input type="radio" name="dish_status" value="1" required>Active
+                                    <input type="radio" name="dish_status" value="0" required>Inactive
                                 </div>
                             </div>
                             <button type="submit" name="btn" class="btn btn-outline-primary btn-block">Add Dish</button>

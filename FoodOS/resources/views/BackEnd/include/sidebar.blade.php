@@ -9,14 +9,14 @@
     <!-- Sidebar -->
     <div class="sidebar">
       <!-- Sidebar user panel (optional) -->
-      <div class="user-panel mt-3 pb-3 mb-3 ">
-        <div class="image">
-          <img src="{{asset('/Backend Resource File')}}/dist/img/AdminLTELogo.png" class="img-circle elevation-2" alt="User Image">
+        <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+            <div class="image">
+                <img src="{{asset('/Backend Resource File')}}/dist/img/AdminLTELogo.png" class="img-circle elevation-2" alt="User Image">
+            </div>
+            <div class="info">
+                <a href="#" class="d-block">{{ Auth::user()->name }}</a>
+            </div>
         </div>
-        <div class="info">
-          <a href="#" class="d-block">{{ Auth::user()->name }}</a>
-        </div>
-      </div>
 
       <!-- Sidebar Menu -->
       <nav class="mt-2">
@@ -25,7 +25,7 @@
                with font-awesome or any other icon font library -->
             <li class="nav-item has-treeview">
                 <a href="#" class="nav-link">
-                    <i class="nav-icon fa fa-box"></i>
+                    <i class="nav-icon fa fa-utensils"></i>
                     <p>
                         Dish
                         <i class="right fas fa-angle-left"></i>
@@ -48,7 +48,7 @@
             </li>
           <li class="nav-item has-treeview">
             <a href="#" class="nav-link">
-                <i class="nav-icon fas fa-motorcycle"></i>
+                <i class="nav-icon fas fa-truck"></i>
               <p>
                 Delivery Boy
                 <i class="right fas fa-angle-left"></i>
@@ -81,13 +81,13 @@
                     <li class="nav-item">
                         <a href="{{route('show_user_add_table')}}" class="nav-link active">
                             <i class="fa fa-plus nav-icon"></i>
-                            <p>Add Delivery Boy</p>
+                            <p>Add User</p>
                         </a>
                     </li>
                     <li class="nav-item">
                         <a href="{{route('manage_user_table')}}" class="nav-link">
                             <i class="fa fa-edit nav-icon"></i>
-                            <p>Manage Delivery Boy</p>
+                            <p>Manage User</p>
                         </a>
                     </li>
                 </ul>

@@ -131,17 +131,20 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/database/migrations" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/FrontEnd Resource File" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Vince\FoodOS\database\migrations" />
-      <recent name="C:\Users\Vince\FoodOS\public" />
+      <recent name="C:\Users\Vince\FoodOS\public\FrontEnd Resource File" />
+      <recent name="C:\Users\Vince\FoodOS\public\FrontEnd Resource File\js" />
+      <recent name="C:\Users\Vince\FoodOS\public\FrontEnd Resource File\css" />
       <recent name="C:\Users\Vince\FoodOS\resources\views" />
-      <recent name="C:\Users\Vince\FoodOS\app\Models" />
       <recent name="C:\Users\Vince\FoodOS\app\Http\Controllers" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Vince\FoodOS\resources\views" />
     </key>
   </component>
   <component name="RunManager">
@@ -165,11 +168,24 @@
       <workItem from="1610594996790" duration="79000" />
       <workItem from="1610595332347" duration="3990000" />
       <workItem from="1611061225199" duration="581000" />
-      <workItem from="1611130600360" duration="2784000" />
+      <workItem from="1611130600360" duration="12389000" />
+      <workItem from="1611149058421" duration="7396000" />
+      <workItem from="1611562167371" duration="16745000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/resources/views/BackEnd/Home/index.blade.php</url>
+          <line>5</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

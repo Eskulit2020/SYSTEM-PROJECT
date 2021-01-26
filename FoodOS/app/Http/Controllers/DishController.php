@@ -56,7 +56,7 @@ class DishController extends Controller
     {
         $dish = Dish::find($dish_id);
         $dish->delete();
-        return back();
+        return back()->with('smsdelete', 'Dish Deleted');
     }
 
     public function update(Request $request)

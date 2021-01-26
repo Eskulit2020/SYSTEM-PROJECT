@@ -26,11 +26,11 @@ class UserContoller extends Controller
         $users = User::all();
         return view('BackEnd.user.manage', compact('users'));
     }
-    public function user_delete($delivery_boy_id)
+    public function user_delete($id)
     {
-        $users = User::find(id);
+        $users = User::find($id);
         $users->delete();
-        return back()->with('smsdelete', 'Delivery Boy Deleted');
+        return back()->with('smsdelete', 'User Deleted');
     }
     public function update(Request $request)
     {

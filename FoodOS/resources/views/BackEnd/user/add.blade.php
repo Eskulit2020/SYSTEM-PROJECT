@@ -17,7 +17,7 @@
                 @endif
                 <div class="card">
                     <div class="card-header text-center">
-                        Users
+                        Create Administrator
                     </div>
                     <div class="card-body">
 
@@ -25,20 +25,20 @@
                             @csrf
                             <div class="form-group">
                                 <label>Name</label>
-                                <input type="text" class="form-control" name="name">
+                                <input type="text" class="form-control" name="name" required>
                             </div>
                             <div class="form-group">
                                 <label>Email</label>
-                                <input type="text" class="form-control" name="email">
+                                <input type="text" class="form-control" name="email" required>
                             </div>
 
                             <div class="form-group">
                                 <label>Password</label>
-                                <input type="password" class="form-control" name="password">
+                                <input type="password" class="form-control" name="password" required>
                             </div>
                             <div class="form-group">
                                 <label>User Type</label>
-                                <input type="text" class="form-control" name="usertype">
+                                <input type="text" class="form-control" name="usertype" value="admin" required>
                             </div>
 
                             <button type="submit" name="btn" class="btn btn-outline-primary btn-block"> Add User</button>
