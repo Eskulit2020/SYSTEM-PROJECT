@@ -42,24 +42,26 @@ Route::post('/dish/update', 'App\Http\Controllers\DishController@update')->name(
 
 /*===============Dish end here=====================*/
 
-/*===============Dish start here=====================*/
+/*===============User start here=====================*/
 Route::get('/user/add','App\Http\Controllers\UserContoller@index')->name('show_user_add_table');
 Route::post('/user/save','App\Http\Controllers\UserContoller@save_user')->name('save_user_data');
 Route::get('/user/manage','App\Http\Controllers\UserContoller@manage_user')->name('manage_user_table');
 Route::get('/user/delete/{id}','App\Http\Controllers\UserContoller@user_delete')->name('user_delete');
 Route::post('/user/update', 'App\Http\Controllers\UserContoller@update')->name('user_update');
-/*===============Dish end here=====================*/
+/*===============User end here=====================*/
 
-/*===============BackEnd end here=====================*/
-
-Route::get('/order','App\Http\Controllers\FoodOrder@index')->name('order');
-Route::get('/backhome','App\Http\Controllers\FoodOrder@backhome')->name('backhome');
-
-Route::get('/display', [WidgetController::class, 'displayRecord']);
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::group(['middleware'=>['auth','admin']], function(){
     Route::get('/dashboard', [WidgetController::class, 'displayRecordusers']);
 
 });
+/*===============BackEnd end here=====================*/
+
+/*===============FrontEnd start here=====================*/
+Route::get('/display', [WidgetController::class, 'displayRecord']);
+Route::get('/order','App\Http\Controllers\FoodOrder@index')->name('order');
+Route::get('/backhome','App\Http\Controllers\FoodOrder@backhome')->name('backhome');
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+/*===============FrontEnd end here=====================*/
+
 
 
